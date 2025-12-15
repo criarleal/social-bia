@@ -141,12 +141,13 @@
         </a>
       </div>
 
+      <!-- Salvar na Agenda usando arquivo .vcf -->
       <div class="px-6 py-2 w-full opacity-0 animate-fade-up delay-700">
-        <button onclick="generateVCard()" class="w-full relative overflow-hidden bg-gradient-to-r from-rose-300 via-pink-400 to-rose-400 text-black font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-3 transition-transform hover:scale-[1.02] active:scale-[0.98]">
+        <a href="contato.vcf" download class="w-full relative overflow-hidden bg-gradient-to-r from-rose-300 via-pink-400 to-rose-400 text-black font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-3 transition-transform hover:scale-[1.02] active:scale-[0.98]">
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-shimmer"></div>
           <i class="fa-solid fa-user-plus text-black"></i>
           <span class="uppercase tracking-widest text-sm z-10">Salvar na Agenda</span>
-        </button>
+        </a>
       </div>
 
       <!-- Destaque do Mês agora como link -->
@@ -185,38 +186,5 @@
 
     </main>
 
-    <script>
-      function generateVCard() {
-        const profile = {
-          name: "Bia Leal",
-          title: "Especialista em Sobrancelhas",
-          instagram: "https://www.instagram.com/bialeal.beauty/",
-          address: "R. Antônio Olívio Rodrigues, 346 - Capão da Imbuia, Curitiba - PR"
-        };
-
-        const vCardData = [
-          'BEGIN:VCARD',
-          'VERSION:3.0',
-          `FN:${profile.name}`,
-          'N:Leal;Bia;;;',
-          'ORG:Bia Leal Design',
-          `TITLE:${profile.title}`,
-          `TEL;TYPE=CELL:${profile.phone}`,
-          `URL:${profile.instagram}`,
-          `EMAIL;TYPE=WORK:${profile.email}`,
-          `ADR;TYPE=WORK:;;${profile.address};;;;`,
-          'END:VCARD'
-        ].join('\n');
-
-        const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'BiaLeal_Design.vcf');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-    </script>
   </body>
 </html>
