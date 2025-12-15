@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bia Leal | Especialista em Sobrancelhas</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+            },
+            colors: {
+              rose: {
+                350: '#E6A4B4',
+              }
+            },
+            animation: {
+              'fade-up': 'fadeUp 0.8s ease-out forwards',
+              'shimmer': 'shimmer 2.5s infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              shimmer: {
+                '100%': { transform: 'translateX(100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      body {
+        margin: 0;
+        background-color: #000;
+        overflow-x: hidden;
+      }
+
+      .glass-container {
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      }
+
+      .glass-button {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        transition: all 0.3s ease;
+      }
+      
+      .glass-button:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(230, 164, 180, 0.5);
+      }
+      
+      .glass-button:active {
+        transform: scale(0.95);
+      }
+
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-400 { animation-delay: 400ms; }
+      .delay-500 { animation-delay: 500ms; }
+      .delay-600 { animation-delay: 600ms; }
+      .delay-700 { animation-delay: 700ms; }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-4 relative text-white">
+
+    <div class="fixed inset-0 z-0">
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105" 
+           style="background-image: url('https://images.unsplash.com/photo-1620331309609-80133f1aa613?q=80&w=2000&auto=format&fit=crop');">
+      </div>
+      <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+    </div>
+
+    <div class="fixed top-[-10%] left-[-10%] w-64 h-64 bg-rose-500 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-pulse-slow z-0 pointer-events-none"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-64 h-64 bg-purple-500 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-pulse-slow z-0 pointer-events-none" style="animation-delay: 2s;"></div>
+
+    <main class="relative z-10 w-full max-w-md glass-container rounded-2xl overflow-hidden opacity-0 animate-fade-up">
+      
+      <div class="flex flex-col items-center text-center p-6 pb-2">
+        <div class="relative group cursor-pointer opacity-0 animate-fade-up delay-100">
+          <div class="absolute -inset-1 bg-gradient-to-r from-rose-300 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
+          <img src="https://ugc.production.linktr.ee/LEcBStAvSwaf8hQ6R7mg_zcGjfdb8w8m4vnM7?io=true&size=avatar-v3_0" 
+               alt="Bia Leal" 
+               class="relative w-32 h-32 rounded-full object-cover border-4 border-black/50">
+        </div>
+
+        <h1 class="text-2xl font-bold mt-4 tracking-wide opacity-0 animate-fade-up delay-200">Bia Leal</h1>
+        <h2 class="text-rose-350 text-sm font-semibold uppercase tracking-wider mt-1 opacity-0 animate-fade-up delay-300">Especialista em Sobrancelhas</h2>
+        <p class="text-gray-200 text-sm mt-3 font-light max-w-xs leading-relaxed opacity-0 animate-fade-up delay-400">
+          Transformando olhares através das sobrancelhas! ✨
+        </p>
+      </div>
+
+      <!-- Grid de Botões de Ação -->
+      <div class="grid grid-cols-2 gap-3 px-6 py-4 w-full">
+        <a href="https://wa.me/message/277Q2Y5TMN2MD1" target="_blank" class="glass-button flex flex-col items-center justify-center p-4 gap-2 rounded-xl text-white opacity-0 animate-fade-up delay-500">
+          <i class="fa-brands fa-whatsapp text-2xl text-rose-350"></i>
+          <span class="text-xs font-medium tracking-wide">WhatsApp</span>
+        </a>
+
+        <a href="https://www.instagram.com/bialeal.beauty/" target="_blank" class="glass-button flex flex-col items-center justify-center p-4 gap-2 rounded-xl text-white opacity-0 animate-fade-up delay-500">
+          <i class="fa-brands fa-instagram text-2xl text-rose-350"></i>
+          <span class="text-xs font-medium tracking-wide">Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/bialealdesign/" target="_blank" class="glass-button flex flex-col items-center justify-center p-4 gap-2 rounded-xl text-white opacity-0 animate-fade-up delay-600">
+          <i class="fa-brands fa-facebook-f text-2xl text-rose-350"></i>
+          <span class="text-xs font-medium tracking-wide">Facebook</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@bialeal.beauty?_t=8eg4kns398g&_r=1" target="_blank" class="glass-button flex flex-col items-center justify-center p-4 gap-2 rounded-xl text-white opacity-0 animate-fade-up delay-600">
+          <i class="fa-brands fa-tiktok text-2xl text-rose-350"></i>
+          <span class="text-xs font-medium tracking-wide">TikTok</span>
+        </a>
+      </div>
+
+      <div class="px-6 py-2 w-full opacity-0 animate-fade-up delay-700">
+        <button onclick="generateVCard()" class="w-full relative overflow-hidden bg-gradient-to-r from-rose-300 via-pink-400 to-rose-400 text-black font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-3 transition-transform hover:scale-[1.02] active:scale-[0.98]">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-shimmer"></div>
+          <i class="fa-solid fa-user-plus text-black"></i>
+          <span class="uppercase tracking-widest text-sm z-10">Salvar na Agenda</span>
+        </button>
+      </div>
+
+      <!-- Destaque do Mês agora como link -->
+      <div class="px-6 py-4 w-full opacity-0 animate-fade-up delay-700">
+        <a href="https://www.instagram.com/p/DQEutk7De3B/" target="_blank" class="relative glass-button rounded-xl p-3 flex gap-4 items-center group cursor-pointer hover:bg-white/10">
+          <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 border border-white/20">
+            <img src="https://scontent.cdninstagram.com/v/t51.82787-15/568725603_18070464323255340_9122882321759676433_n.jpg?stp=dst-jpg_e35_s1080x1080_tt6&_nc_cat=104&ig_cache_key=Mzc0ODMyNjIzMjA0MDUzMzQ0MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuQzMifQ%3D%3D&_nc_ohc=vE3ZPpX2qyYQ7kNvwG7XZDi&_nc_oc=Adk4Rxo8P00kRctezx73HWMhyrDyJ2ggujGrpbPKdAXND2tRzn2n2Vtc3mGERRy6rC-YQhtIumqAFMD2JdhFwGAs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=NG1b5ESo18VyjMInjULeAg&oh=00_AflD3TBYBw70hoZYnQGSat3WakaRie7MS02d-defYuuBbQ&oe=69456FCA" 
+                 alt="Destaque do mês" 
+                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+          </div>
+          <div class="flex-1">
+            <h3 class="text-white text-sm font-bold mb-1">Destaque do Mês</h3>
+            <p class="text-gray-300 text-xs line-clamp-2">
+              Conheça o novo protocolo de Brow Lamination para um olhar marcante.
+            </p>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-rose-400/20 flex items-center justify-center shrink-0 group-hover:bg-rose-400/40 transition-colors">
+            <i class="fa-solid fa-arrow-right text-rose-300 text-sm"></i>
+          </div>
+        </a>
+      </div>
+
+      <!-- Rodapé atualizado -->
+      <footer class="mt-6 mb-8 text-center opacity-0 animate-fade-up" style="animation-delay: 800ms;">
+        <div class="px-6 py-2 w-full">
+          <a href="https://www.google.com/maps/search/?api=1&query=R.+Antônio+Olívio+Rodrigues,+346+-+Capão+da+Imbuia,+Curitiba+-+PR" target="_blank" 
+             class="glass-button w-full flex items-center justify-center gap-2 p-4 rounded-xl text-white">
+            <i class="fa-solid fa-map-pin text-2xl text-rose-350"></i>
+            <span class="text-xs font-medium tracking-wide">Localização</span>
+          </a>
+        </div>
+        <p class="text-gray-500 text-[10px] font-light tracking-widest uppercase mt-4">
+          © 2025 Bia Leal Design. All rights reserved.
+        </p>
+      </footer>
+
+    </main>
+
+    <script>
+      function generateVCard() {
+        const profile = {
+          name: "Bia Leal",
+          title: "Especialista em Sobrancelhas",
+          instagram: "https://www.instagram.com/bialeal.beauty/",
+          address: "R. Antônio Olívio Rodrigues, 346 - Capão da Imbuia, Curitiba - PR"
+        };
+
+        const vCardData = [
+          'BEGIN:VCARD',
+          'VERSION:3.0',
+          `FN:${profile.name}`,
+          'N:Leal;Bia;;;',
+          'ORG:Bia Leal Design',
+          `TITLE:${profile.title}`,
+          `TEL;TYPE=CELL:${profile.phone}`,
+          `URL:${profile.instagram}`,
+          `EMAIL;TYPE=WORK:${profile.email}`,
+          `ADR;TYPE=WORK:;;${profile.address};;;;`,
+          'END:VCARD'
+        ].join('\n');
+
+        const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'BiaLeal_Design.vcf');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+  </body>
+</html>
